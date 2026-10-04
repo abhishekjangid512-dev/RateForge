@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: api-key-service
+  datasource:
+    url: ${RATEFORGE_DB_URL:jdbc:postgresql://localhost:5432/rateforge}
+    username: ${RATEFORGE_DB_USER:postgres}
+    password: ${RATEFORGE_DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
